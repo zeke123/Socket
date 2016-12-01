@@ -3,9 +3,7 @@ package com.zhoujian.socket.service;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
-
 import com.zhoujian.socket.utils.Utils;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -21,7 +19,9 @@ import java.util.Random;
  */
 
 public class TcpService extends Service
-{  private boolean mIsServiceDestoryed = false;
+{
+    private boolean mIsServiceDestoryed = false;
+
     private String[] mDefinedMessages = new String[] {
             "你好?",
             "请问你叫什么名字呀？",

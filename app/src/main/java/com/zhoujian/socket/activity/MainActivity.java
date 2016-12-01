@@ -46,10 +46,13 @@ import butterknife.InjectView;
 
  */
 
-public class MainActivity extends Activity  {
+public class MainActivity extends Activity
+{
 
     private static final int MESSAGE_RECEIVE_NEW_MSG = 1;
+
     private static final int MESSAGE_SOCKET_CONNECTED = 2;
+
     @InjectView(R.id.msg_container)
     TextView mMsgContainer;
     @InjectView(R.id.msg)
