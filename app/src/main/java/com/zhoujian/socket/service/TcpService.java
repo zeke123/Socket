@@ -4,7 +4,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 
-import com.zhoujian.socket.utils.MyUtils;
+import com.zhoujian.socket.utils.Utils;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -102,8 +102,8 @@ public class TcpService extends Service
             out.println(msg);
         }
         // 关闭流
-        MyUtils.close(out);
-        MyUtils.close(in);
+        Utils.close(out);
+        Utils.close(in);
         client.close();
     }
 }
