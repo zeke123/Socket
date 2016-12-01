@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.zhoujian.socket.R;
 import com.zhoujian.socket.service.TcpService;
-import com.zhoujian.socket.utils.MyUtils;
+import com.zhoujian.socket.utils.Utils;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -172,8 +172,8 @@ public class MainActivity extends Activity  {
                     mHandler.obtainMessage(MESSAGE_RECEIVE_NEW_MSG, showedMsg).sendToTarget();
                 }
             }
-            MyUtils.close(mPrintWriter);
-            MyUtils.close(br);
+            Utils.close(mPrintWriter);
+            Utils.close(br);
             socket.close();
         } catch (IOException e) {
             e.printStackTrace();
